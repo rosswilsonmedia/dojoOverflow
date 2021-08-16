@@ -48,7 +48,7 @@ public class AnswerController {
 		newAnswer.setAnswer(answer);
 		Question question = questionService.getOne(id);
 		newAnswer.setQuestion(question);
-		Answer answerInDb = answerService.createOne(newAnswer);
+		answerService.createOne(newAnswer);
 		
 		
 		return "redirect:/questions/"+id;
